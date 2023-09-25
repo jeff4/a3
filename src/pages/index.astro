@@ -1,8 +1,14 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Greeting from '../components/Greeting.jsx';
 const pageTitle = "Jeff's Homepage";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-	<h2>This version uses BaseLayout.</h2>
+
+	<Greeting client:load messages={
+			  ["Hi", "Hej", "Hello", "Hola", "Habari", "喂,你好"]
+		}
+	/>
+
 </BaseLayout>
