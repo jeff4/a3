@@ -64,6 +64,16 @@ h1 {
 	display: unset;
 }
 
+/* copied this footer from the footer style at bottom of this file for large viewport sizes. */
+
+.footer a {
+	display: inline-block;
+	padding: 20px 18px 0px 0px;
+}
+
+
+
+
 
 /* When viewport is greater than 636px, show desktop header */
 @media screen and (min-width: 636px) {
@@ -84,4 +94,19 @@ h1 {
 		display: none;
 	}
 
+
+	/* style for "footer" which is an HTML class defined in '/src/components/Footer.astro' */
+	.footer {
+		display: block;
+		position: static;
+		width: auto;
+		background: none;
+	}
+
+	.footer a {
+		display: inline-block;
+		padding: 20px 18px 0px 0px;
+	}
+
 }
+
