@@ -1,0 +1,23 @@
+---
+import BaseLayout from './BaseLayout.astro';
+const { frontmatter } = Astro.props;
+---
+
+
+<BaseLayout pageTitle={frontmatter.title}>
+
+	<!-- 
+
+		I should use something like this phind.com answer to make sure the below frontmatter.title line doesn't duplicate the {pageTitle} created by BaseLayout. phind answer: https://www.phind.com/search?cache=zblf17uivrxbax0e4ebzf24v
+
+	-->
+
+	<!--
+	<h1>{frontmatter.title}</h1>
+	-->
+
+	<p> <em>Publish Date: {frontmatter.pubDate.slice(0,10)}</em>
+	<p> <em>Author: {frontmatter.author}</em>
+	<slot />
+
+</BaseLayout>

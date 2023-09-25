@@ -1,5 +1,7 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import '../styles/global.css';
 const pageTitle = "About Me";
 
 const identity = {
@@ -18,7 +20,18 @@ const goal = 3;
 
 ---
 
-	<BaseLayout pageTitle={pageTitle}>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>{pageTitle}</title>
+	</head>
+  
+	<body>
+		<Header />
+	
+		<h1>{pageTitle}</h1>
 
 		<p>Here are a few facts about me:</p> 
 
@@ -49,6 +62,8 @@ const goal = 3;
 				
 				}
 
+		<Footer />		
 
-	</BaseLayout>
 
+	</body>
+</html>

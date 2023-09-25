@@ -19,3 +19,69 @@ h1 {
 	margin: 1rem 0;
 	font-size: 2.5 rem;
 }
+
+/* nav styles */
+
+.hamburger {
+	padding-right: 20px;
+	cursor: pointer;
+}
+
+.hamburger .line {
+	display: block;
+	width: 40px;
+	height: 5px;
+	margin-bottom: 10px;
+	background-color: #99d6ff;
+}
+
+
+.nav-links {
+	width: 100%;
+	top: 5rem;
+	left: 48px;
+	background-color: #99d6ff; /* bg color of mobile menu when expanded */
+	display: none;
+	margin: 0;
+}
+
+.nav-links a {
+	display: block;
+	text-align: center;
+	padding: 10px 0;
+	text-decoration: none;
+	font-size: 1.2rem;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.nav-links a:hover, a:focus {
+	background-color: #99d6ff;
+	/* changed from original orange value ff9776 to current blue 99d6ff*/
+}
+
+.expanded {
+	display: unset;
+}
+
+
+/* When viewport is greater than 636px, show desktop header */
+@media screen and (min-width: 636px) {
+	.nav-links {
+		margin-left: 5em;
+		display: block;
+		position: static;
+		width: auto;
+		background: none;
+	}
+
+	.nav-links a {
+		display: inline-block;
+		padding: 15px 20px;
+	}
+
+	.hamburger {
+		display: none;
+	}
+
+}
